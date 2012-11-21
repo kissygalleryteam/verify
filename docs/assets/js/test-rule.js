@@ -12,7 +12,23 @@ UNDEFINED=undefined,
 NAN=NaN;
 var FALSEARR=[NULL,EMPTY,FALSE,ZERO,UNDEFINED,NAN];
 
+function test(arr){
+	_.each(arr,function(num){
+		var des=num[0],
+		fun=num[1],
+		arg=num[2],
+		index=num[3]
+		tobe=num[4];
+		it(des,function(){
+		  	expect(fun.apply(null,arg)[index]).toBe(tobe);
+		});	
+	});
+}
+/**
+ * 规则测试用例
+ */
 describe("RULE", function() {
+	//必填项
 	describe("required", function() {
 		  var info='亲，不能为空。',
 		  required=V.rule.required;
@@ -41,6 +57,7 @@ describe("RULE", function() {
 		  });
 	});
 	
+	//长度限制
 	describe("length",function(){
 		var max=30,
 		smax="测试长度不能超过最大测试长度不能超过最大测试长度不能超过最大",
@@ -85,5 +102,70 @@ describe("RULE", function() {
 		  	});
 		});
 	});
+	
+	//邮箱
+	describe("email",function(){
+		var arr=["333","333@dd","333@ddcom","@dd.com","1@.com","1@dd."],
+		rarr=["","1.2@c.l"],
+		email=V.rule.email;
+		it("错误邮箱格式验证",function(){
+			_.each(arr,function(num){
+		  		expect(email(num,null)[0]).toBe(false);
+		  	});
+		});
+		
+		it("正确邮箱格式验证",function(){
+			_.each(rarr,function(num){
+		  		expect(email(num,null)[0]).toBe(true);
+		  	});
+		});
+	});
+	
+	//英文
+	describe("english",function(){
+		var arr=["afv333","erew.ll"," erew.ll","\nerew.ll"],
+		rarr=["","ascxd"],
+		english=V.rule.english;
+		it("错误英文格式验证",function(){
+			_.each(arr,function(num){
+		  		expect(english(num,null)[0]).toBe(false);
+		  	});
+		});
+		
+		it("正确英文格式验证",function(){
+			_.each(rarr,function(num){
+		  		expect(english(num,null)[0]).toBe(true);
+		  	});
+		});
+	});
+	
+	//手机号码
+	describe("cellphone",function(){
+		var cellphone=V.rule.cellphone;
+		var arr=[["错误验证：超过11位","186001920390","手机号码为11位数字，您输入的号码为12位，请仔细查看并修改"],
+			["错误验证：不足11位",'1860034343',"手机号码为11位数字，您输入的号码为10位，请仔细查看并修改"],
+			["错误验证：含有空格",'186 0034 343',"手机号码为11位数字，您输入的号码包含非数字字符，请仔细查看并修改"],
+			["错误验证：号码不存在",'11600343439',"您输入的号码不存在，请仔细查看并修改"],
+			["错误验证：包含其他字符",'wew343',"手机号码为11位数字，您输入的号码包含非数字字符，请仔细查看并修改"]
+		];
+		_.each(arr,function(num){
+			it(num[0],function(){
+			  	expect(cellphone(num[1],null)[1]).toBe(num[2]);
+			});	
+		});
+	});
+	
+	//区间
+	describe("range",function(){
+		var range=V.rule.range;
+		var arr=[["错误验证：小于区间",range,[3,NULL,[10,20]],0,false],
+				["错误验证：大于区间",range,[33,NULL,[10,20]],0,false],
+				["正确验证：最小值",range,[10,NULL,[10,20]],0,true],
+				["正确验证：最大值",range,[20,NULL,[10,20]],0,true],
+				["正确验证：区间值",range,[13,NULL,[10,20]],0,true]
+		];
+		test(arr);
+	});
+	
 });
  
