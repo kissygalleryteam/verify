@@ -222,11 +222,16 @@
 	    		results :{}
 	    	},
 	    	results,
-	    	field;
-    	each(fields, function(value, key, list) {
-    		// field = validate(key, value);
-    		// results[key] = field;
+	    	field,
+	    	fvalue;
+	    console
+    	each(fields, function(name, rules, list) {
+    		fvalue = "123456";
+    		field = validate(name, rules, fvalue);
+    		results[name] = field;
     	});
+    	
+    	return result;
     };
     V.validateFields = validateFields;
     return V;
