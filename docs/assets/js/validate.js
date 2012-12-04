@@ -4,8 +4,15 @@
 		isFunction = _.isFunction,
 		getFunctionName = function(fn) {
             return typeof fn.name === 'string' ? fn.name: /function\s+([^\{\(\s]+)/.test(fn.toString()) ? RegExp['$1'] : '[Unknown]';
+        },
+        log =  function(obj){
+        	if(typeof console !=='undefined'){
+        		 console.log(obj);
+        	}
         };
-    var V = exports.V = {},
+    var V = exports.V = function(){
+	    	this.initializer.apply(this,arguments);
+	    },
     	R = V.rule = {},
     	_undefinedRule = function() {
     		return [false,"规则不存在"]
@@ -208,31 +215,51 @@
     }
     V.validate = validate;
     /**
-     * 
- 	 * @param {Object} fields
- 	 * fields 格式：{
- 	 * 		fieldName1:[rule1,rule2,...,rulen],
- 	 * 		fieldName2:[rule1,rule2,...,rulen]
- 	 * 	}
+     *如果是复杂的表单验证 ，生成对象实例
      */
-    var validateFields = function(fields) {
-    	var result = {
-	    		success : true,
-	    		failed : "",
-	    		results :{}
-	    	},
-	    	results,
-	    	field,
-	    	fvalue;
-	    console
-    	each(fields, function(name, rules, list) {
-    		fvalue = "123456";
-    		field = validate(name, rules, fvalue);
-    		results[name] = field;
-    	});
-    	
-    	return result;
-    };
-    V.validateFields = validateFields;
+    V.prototype = {
+    	initializer : function(cfg) {
+    		var that = this;
+    		that.config = cfg;
+    		that.fields = cfg.fields;
+    		that.valueFn = cfg.valueFn;
+    	},
+    	getValue : function(name){
+    		var that = this;
+    		return that.valueFn(name);
+    	},
+    	valid : function() {
+    		var that = this,
+    			fields = that.fields,
+    			result = that.validateFields(fields);
+    			return result;
+    	},
+    	validateFields : function(fields) {
+	    	var that = this,
+	    		result = {
+		    		success : true,
+		    		failed : [],
+		    		results : {}
+		    	},
+		    	results = {
+		    		
+		    	},
+		    	fieldResult,
+		    	firstError;
+	    	each(fields, function(rules, name) {
+	    		var fsuccess = true,
+	    			fvalue = that.getValue(name);
+	    		fieldResult = validate(name, rules, fvalue);
+	    		fsuccess = fieldResult.success;
+	    		if(!fsuccess) {
+	    			result.success = false;
+	    			result.failed.push(name);
+	    		}
+	    		results[name] = fieldResult;
+	    	});
+	    	result.results = results;
+	    	return result;
+	    }
+    }
     return V;
 })(this);

@@ -62,7 +62,7 @@
 		describe("length", function() {
 			var max = 30,
 				smax = "测试长度不能超过最大测试长度不能超过最大测试长度不能超过最大",
-				smin = "测试长度不能超过最大"
+				smin = "测试长度不能超过最大",
 				min = 10,
 				value = [smin,smax],
 				info = [],
@@ -196,7 +196,7 @@
 	
 	describe("validate", function() {
 		it("测试返回的失败规则", function() {
-			var field = ["range错误", ["number", ["range", null, [20,34]]], "1192039"],
+			var field = ["range错误", ["number", ["range", null, [20, 34]]], "1192039"],
 				validate = V.validate,
 				data = validate.apply(null, field)["failed"];
 			expect(data).toBe("range");
@@ -205,26 +205,31 @@
 		it("测试多个规则混排", function() {
 		   function isInited(attr){
 				if(attr === 22){
-					return [true,"已初始化"];
+					return [true, "已初始化"];
 				}
-				return [false,"未初始化"];
+				return [false, "未初始化"];
 			};
-			var	field = ["自定义函数", ["number", ["range", null, [20,34]],"english",isInited], 23],
+			var	field = ["自定义函数", ["number", ["range", null, [20, 34]], "english", isInited], 23],
 				validate = V.validate,
 				failed = validate.apply(null, field)["failed"];
 			expect(failed).toBe("english");
 		});
 	});
 	
-	describe("validateFields", function() {
+	describe("new Obj()", function() {
 		it("测试传入object", function() {
-			var validateFields=V.validateFields,
-				fields = {
-					phone:[["phone", "您输入的号码有误"],"number"],
-					name:["english"]
-				},
-				data=validateFields(fields);
-			console.log(data)
+			var validate = new V({
+					fields : {
+						phone : [["cellphone", "您输入的号码有误"],"number"],
+						name : ["english"]
+					},
+					valueFn : function(name) {
+						return "18600192036";
+					}
+				}),
+				data = validate.valid();
+				console.log(data);
+			 	
 		});
 	});
 	
