@@ -1,3 +1,11 @@
 .settings
 .settings/*
 .project
+*.swp
+node_modules/*
+sass/*
+*.scss
+Watchfile
+server.js	
+.clam/*
+
