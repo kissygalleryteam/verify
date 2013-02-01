@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="http://chishang.github.com/img/favicon.ico" />
+		<title>表单验证</title>
+		<meta name="description" content="" />
+		<meta name="author" content="chishang.lcw" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/test.css" />
+		<script src="../assets/js/underscore.js"></script>
+		<script src="../assets/js/validate.js"></script>
+	</head>
+
+	<body>
+		<form class="validform">
+			<fieldset class="field">
+				<h2 class="field-caption">1.联系信息</h2>
+				<ul class="field-list">
+					<li class="field-item">
+						<label for="tel" class="label">手机号码：</label><input type="tel" name="tel" id="tel" class="input-text" />
+					</li>
+					<li class="field-item">
+						<label for="poster" class="label">邮编：</label><input type="number" name="poster" id="poster" class="input-text" />
+					</li>
+				</ul>
+				
+			</fieldset>
+			
+			<fieldset class="field">
+				<h2 class="field-caption">2.教育背景</h2>
+				<ul class="field-list">
+					<li class="field-item">
+						<label for="gz" class="label">高中：</label><input type="text" name="gz" id="gz" class="input-text" />
+					</li>
+					<li class="field-item">
+						<label for="dx" class="label">大学：</label><input type="text" name="dx" id="dx" class="input-text" />
+					</li>
+				</ul>
+				
+			</fieldset>
+			
+			<fieldset class="field">
+				<h2 class="field-caption">3.详细信息</h2>
+				<ul class="field-list">
+					<li class="field-item">
+						<label  class="label">性别：</label> <label class="label-radio"><input type="radio" value="woman" name="sex" />男</label><label class="label-radio"><input type="radio" value="man" name="sex" />女</label>
+					</li>
+					<li class="field-item">	
+						<label  class="label">血型：</label> <label class="label-radio"><input type="radio" value="A" name="aob" />A</label><label class="label-radio"><input type="radio" value="B" name="aob" />B</label><label class="label-radio"><input type="radio" value="O" name="aob" />O</label><label class="label-radio"><input type="radio" value="AB" name="aob" />AB</label>
+					</li>
+				</ul>
+				
+			</fieldset>
+			<input class="form-submitbtn" id="J_Submit" type="submit" value="提交表单" />
+		</form> 
+		<script>
+			 (function(){
+			 	var subBtn = "";
+			 })();
+		</script>
+	</body>
+</html>
