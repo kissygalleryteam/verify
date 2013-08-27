@@ -1,0 +1,14 @@
+{
+    "name": "validation",
+    "version": "1.0",
+    "desc": "",
+    "cover": "",
+    "tag":"",
+    "author": {
+        "name": "kissy-team",
+        "email": "kissy-team@gmail.com",
+        "page": ""
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
