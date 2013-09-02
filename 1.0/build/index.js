@@ -99,6 +99,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             if(autoValidate){
                 S.each(fields,function(value,name){
                      var node =  nodeFn(name);
+                    if(!node) return;
                     node.on('change',function(e){
                         self.validate(name);
                     });
@@ -144,7 +145,12 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             if (typeof field == 'undefined') {
                 toValidateFields = fields;
             } else if (S.isString(field)) {
-                toValidateFields[field] = fields[field];
+                var newfield = fields[field];
+                if(newfield) {
+                    toValidateFields[field] = newfield;
+                }else{
+                    return totalResults;
+                }
             } else if (S.isArray(field)) {
                 S.each(field, function (value, index) {
                     toValidateFields[value] = fields[value];
@@ -357,10 +363,14 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                     } else{
                         self.hideTip(fieldState);
                     }
-
                 });
 
             }, 50, false, this);
+        },
+        destroy:function(){
+            var that = this;
+            that.set('state',null);
+            that.set('fields',null);
         }
 
     }, {ATTRS: /** @lends Validation*/{

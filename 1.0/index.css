@@ -73,6 +73,8 @@
 
 .validation-wrap{
     display:inline-block;
+    *display: inline;
+    *zoom: 1;
     position:relative;
     line-height: 32px;
 }
@@ -83,6 +85,8 @@
 
 .form-submitbtn {
     display: inline-block;
+    *display: inline;
+    *zoom: 1;
     width: auto;
     height: 30px;
     line-height: 30px;
