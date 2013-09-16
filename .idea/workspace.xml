@@ -41,7 +41,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.0/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="15" selection-start="4574" selection-end="4574" vertical-scroll-proportion="-4.109091">
+            <state line="128" column="17" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1379341761000" expanded="false" signature="14419:14430" placeholder="..." />
               </folding>
@@ -52,7 +52,16 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.0/build/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="404" column="12" selection-start="14236" selection-end="14236" vertical-scroll-proportion="0.0">
+            <state line="404" column="12" selection-start="14234" selection-end="14234" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="abc.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/abc.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="28" selection-start="159" selection-end="159" vertical-scroll-proportion="0.19512194">
               <folding />
             </state>
           </provider>
@@ -67,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="61" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.6884984">
+            <state line="77" column="52" selection-start="2427" selection-end="2427" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +98,6 @@
         <option value="$PROJECT_DIR$/1.0/index.css" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/1.0/demo/index.html" />
-        <option value="$PROJECT_DIR$/abc.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/1.0/build/index-min.css" />
@@ -97,6 +105,7 @@
         <option value="$PROJECT_DIR$/1.0/build/index.js" />
         <option value="$PROJECT_DIR$/1.0/index.js" />
         <option value="$PROJECT_DIR$/1.0/guide/index.md" />
+        <option value="$PROJECT_DIR$/abc.json" />
       </list>
     </option>
   </component>
@@ -132,6 +141,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -184,15 +194,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -227,7 +236,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24982105" sideWeight="0.6716642" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -238,6 +246,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -351,13 +360,6 @@
         <state line="32" column="89" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.02347418" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/abc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="15" selection-end="21" vertical-scroll-proportion="0.024390243">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/lib/source-map/source-map-generator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="228" column="33" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.02347418" />
@@ -379,23 +381,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/build/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="404" column="12" selection-start="14236" selection-end="14236" vertical-scroll-proportion="0.0">
+        <state line="404" column="12" selection-start="14234" selection-end="14234" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="52" selection-start="2427" selection-end="2427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="15" selection-start="4574" selection-end="4574" vertical-scroll-proportion="-4.109091">
+        <state line="128" column="17" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1379341761000" expanded="false" signature="14419:14430" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+    <entry file="file://$PROJECT_DIR$/abc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="61" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.6884984">
+        <state line="8" column="28" selection-start="159" selection-end="159" vertical-scroll-proportion="0.19512194">
           <folding />
         </state>
       </provider>
