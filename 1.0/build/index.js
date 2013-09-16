@@ -37,8 +37,8 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
         },
         length: function (value, arg, info) {
             if (value.length === 0) return [true];
-            if (arg[0] && value.length < arg[0]) return [false, info ? info : '亲，长度至少需要' + arg[0]];
-            if (arg[1] && value.length > arg[1]) return [false, info ? info : '亲，长度至少需要' + arg[1]];
+            if (arg[0] && value.length < arg[0]) return [false, info ? info : '亲，长度至少需要' + arg[0]+'。'];
+            if (arg[1] && value.length > arg[1]) return [false, info ? info : '亲，长度最多不能超过' + arg[1]+'。'];
             return [true];
         },
         email: function (value, arg, info) {
@@ -76,7 +76,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
         },
         date: function (value, arg, info) {
             if (/^(\d{4})(-|\/)(\d{2})\2(\d{2})$/.test(value)) return [true];
-            return [false, info ? info : '请填写正确的日期格式：YYYY-MM-DD'];
+            return [false, info ? info : '请填写正确的日期格式：YYYY-MM-DD。'];
         },
         pattern: function (value, arg, info) {
             if (new RegExp(arg[0]).test(value)) return [true];
@@ -89,9 +89,9 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             var self = this;
             self.publish('validate');
             self.publish('fail');
-            self.bindEvent();
+            self._bindEvent();
         },
-        bindEvent:function(){
+        _bindEvent:function(){
             var self = this;
             var autoValidate = self.get('autoValidate');
             var fields = self.get('fields');
@@ -114,7 +114,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 var field = fieldResult.field;
                 var succeed = fieldResult.succeed;
                 var info = fieldResult.info;
-                self.afterValidate(field, succeed,info);
+                self._afterValidate(field, succeed,info);
             });
             self.on('fail',function(fieldResult){
                 var field = fieldResult.field;
@@ -122,7 +122,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 self.error(field,info);
             });
         },
-        afterValidate: function (field,succeed,info) {
+        _afterValidate: function (field,succeed,info) {
             var self = this;
             if (!succeed) {
                 self.fire('fail', {
@@ -133,7 +133,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 self.reset(field);
             }
         },
-        getFunctionName: function (fn) {
+        _getFunctionName: function (fn) {
             return typeof fn.name === 'string' ? fn.name : /function\s+([^\{\(\s]+)/.test(fn.toString()) ? RegExp['$1'] : '[Unknown]';
         },
         validate: function (field) {
@@ -191,10 +191,10 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 if (S.isArray(rule)) {
                     ruleName = rule[0];
                     info = rule[rule.length - 1];
-                    ruleResult = RULES[rule[0]](value, rule.slice(1, rule.length), info);
+                    ruleResult = RULES[ruleName ](value, rule.slice(1, rule.length), info);
                 }
                 else if (S.isFunction(rule)) {
-                    ruleName = self.getFunctionName(rule);
+                    ruleName = self._getFunctionName(rule);
                     ruleResult = rule(value);
                 }
                 else {
@@ -235,10 +235,10 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             var self = this;
             self.add(field, val);
         },
-        disable: function (field, enable) {
+        disable: function (field, isable) {
             var self = this;
             var disabled = self.get('disabled');
-            disabled[field] = enable;
+            disabled[field] = isable;
         },
         error: function (field, info) {
             var self = this;
@@ -263,7 +263,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 fieldState.errorWraper = errorWraper;
             }
             dom.addClass('validationError').removeClass('validationNormal');
-            self.showTip(fieldState);
+            self._showTip(fieldState);
             if (dom.prop('type') === 'text') {
                 function _hideOtherTips(){
                     if(dom.hasClass('validationError')) {
@@ -298,12 +298,12 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             var fieldState = state[field];
             dom.removeClass('validationError').addClass('validationNormal');
             if(fieldState){
-                self.hideTip(fieldState);
-                self.hideIcon(fieldState);
+                self._hideTips(fieldState);
+                self._hideIcon(fieldState);
                 fieldState = null;
             }
         },
-        hideTip: function (fieldState) {
+        _hideTips: function (fieldState) {
             var self = this;
             var state = self.get('state');
             if (typeof fieldState == 'undefined') {
@@ -316,12 +316,12 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
         },
         _hideTip: function (fieldState) {
             var self = this;
-            self.showIcon(fieldState);
+            self._showIcon(fieldState);
             if(fieldState.errorTip){
                 fieldState.errorTip.addClass('hidden');
             }
         },
-        showTip: function (fieldState) {
+        _showTip: function (fieldState) {
             var self = this;
             if(!fieldState.errorTip){
                 var tpl = self.get('errorTipTpl');
@@ -336,16 +336,16 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             }
             fieldState.infoWraper.html(fieldState.info);
             fieldState.errorTip.removeClass('hidden');
-            self.hideIcon(fieldState);
+            self._hideIcon(fieldState);
         },
-        hideIcon: function (fieldState) {
+        _hideIcon: function (fieldState) {
             var self = this;
             var errorClass = self.get('errorClass');
             if (fieldState && fieldState.errorWraper) {
                 fieldState.errorWraper.removeClass(errorClass);
             }
         },
-        showIcon: function (fieldState) {
+        _showIcon: function (fieldState) {
             var self = this;
             var errorClass = self.get('errorClass');
             if (fieldState && fieldState.errorWraper && fieldState.errorWraper.one('.validationError')) {
@@ -359,9 +359,9 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             S.later(function () {
                 S.each(state, function (fieldState) {
                     if (fieldState.name === field.name) {
-                        self.showTip(fieldState);
+                        self._showTip(fieldState);
                     } else{
-                        self.hideTip(fieldState);
+                        self._hideTips(fieldState);
                     }
                 });
 

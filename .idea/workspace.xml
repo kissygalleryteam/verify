@@ -4,8 +4,9 @@
     <list default="true" id="2068a11b-2586-4c42-9ccf-80d4066a83d5" name="Default" comment="" />
     <ignored path="validation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1377768358625" ignored="false" />
+    <file path="/index.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1379338266917" ignored="false" />
     <file path="/index.html" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1377673618698" ignored="false" />
+    <file path="/index.md" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1379335606543" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +26,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.0/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="40" selection-start="2586" selection-end="2586" vertical-scroll-proportion="0.13821138">
+            <state line="152" column="58" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.0/build/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1.0/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="48" selection-start="923" selection-end="923" vertical-scroll-proportion="0.8727273">
+              <folding>
+                <marker date="1379338292000" expanded="false" signature="14533:14544" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="89" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="40" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sapper/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="42" selection-start="80" selection-end="289" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sapper/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="34" selection-start="0" selection-end="2831" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -37,7 +114,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.0/demo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="59" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
+            <state line="86" column="9" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-19.208334">
               <folding />
             </state>
           </provider>
@@ -53,9 +130,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/1.0/demo/index.html" />
-        <option value="$PROJECT_DIR$/1.0/index.js" />
         <option value="$PROJECT_DIR$/1.0/index.css" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/1.0/demo/index.html" />
+        <option value="$PROJECT_DIR$/1.0/guide/index.md" />
+        <option value="$PROJECT_DIR$/1.0/index.js" />
       </list>
     </option>
   </component>
@@ -137,6 +217,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -150,8 +266,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -263,39 +379,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1.0/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="59" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="56" selection-start="3465" selection-end="3465" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="59" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.0/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -334,22 +417,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1.0/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="58" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.0/build/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sapper/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="0" selection-end="2831" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="89" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sapper/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="42" selection-start="80" selection-end="289" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="40" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1.0/demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="59" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.0">
+        <state line="86" column="9" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-19.208334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="48" selection-start="132" selection-end="14747" vertical-scroll-proportion="0.7611465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="40" selection-start="2586" selection-end="2586" vertical-scroll-proportion="0.13821138">
-          <folding />
+        <state line="32" column="48" selection-start="923" selection-end="923" vertical-scroll-proportion="0.8727273">
+          <folding>
+            <marker date="1379338292000" expanded="false" signature="14533:14544" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

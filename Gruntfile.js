@@ -33,6 +33,33 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        copy: {
+            main: {
+                files: [
+                    {
+                        // src: files.js,
+                        expand: true,
+                        src: ['*.css'],
+                        dest: '<%= pkg.version %>/build/',
+                        cwd: '<%= pkg.version %>/',
+                        filter: 'isFile'
+                    }
+                ]
+            }
+        },
+        cssmin: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= pkg.version %>/build/',
+                        src: ['*.css', '!*-min.css'],
+                        dest: '<%= pkg.version %>/build/',
+                        ext: '-min.css'
+                    }
+                ]
+            }
+        },
         // 打包后压缩文件
         // 压缩文件和入口文件一一对应
         uglify: {
@@ -51,7 +78,9 @@ module.exports = function(grunt) {
     });
 
     // 使用到的任务，可以增加其他任务
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-kmc');
-    return grunt.registerTask('default', ['kmc', 'uglify']);
+    return grunt.registerTask('default', ['kmc', 'uglify','copy','cssmin']);
 };
