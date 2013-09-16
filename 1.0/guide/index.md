@@ -60,7 +60,7 @@ verify,灵活的垂直表单验证组件。
 
 ## API说明
 
-* verify（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
+* validate（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
 * add（field,value） 添加校验域。field[string] 域名 ;value 规则
 * remove(field) 移除校验域。field[string] 域名 ;
 * modify(field ,value) 修改某个域的校验规则。field[string] 域名 ;value 规则

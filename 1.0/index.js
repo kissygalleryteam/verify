@@ -130,7 +130,7 @@ KISSY.add(function (S, Node, Base) {
         _getFunctionName: function (fn) {
             return typeof fn.name === 'string' ? fn.name : /function\s+([^\{\(\s]+)/.test(fn.toString()) ? RegExp['$1'] : '[Unknown]';
         },
-        verify: function (field) {
+        validate: function (field) {
             var self = this;
             var fields = self.get('fields');
             var firstError = null;
