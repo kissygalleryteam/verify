@@ -18,8 +18,8 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
      * @constructor
      * @extends Base
      */
-    function verify() {
-        verify.superclass.constructor.apply(this, arguments);
+    function Verify() {
+        Verify.superclass.constructor.apply(this, arguments);
         this.init();
     }
 
@@ -84,7 +84,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
         }
     };
 
-    S.extend(verify, Base, /** @lends verify.prototype*/{
+    S.extend(Verify, Base, /** @lends verify.prototype*/{
         init: function () {
             var self = this;
             self.publish('verify');
@@ -93,10 +93,10 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
         },
         _bindEvent:function(){
             var self = this;
-            var autoValidate = self.get('autoValidate');
+            var autoVerify = self.get('autoVerify');
             var fields = self.get('fields');
             var nodeFn = self.get('nodeFn');
-            if(autoValidate){
+            if(autoVerify){
                 S.each(fields,function(value,name){
                      var node =  nodeFn(name);
                     if(!node) return;
@@ -114,7 +114,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
                 var field = fieldResult.field;
                 var succeed = fieldResult.succeed;
                 var info = fieldResult.info;
-                self._afterValidate(field, succeed,info);
+                self._afterVerify(field, succeed,info);
             });
             self.on('fail',function(fieldResult){
                 var field = fieldResult.field;
@@ -122,7 +122,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
                 self.error(field,info);
             });
         },
-        _afterValidate: function (field,succeed,info) {
+        _afterVerify: function (field,succeed,info) {
             var self = this;
             if (!succeed) {
                 self.fire('fail', {
@@ -141,23 +141,23 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
             var fields = self.get('fields');
             var firstError = null;
             var totalResults = {succeed: true, results: [] };
-            var toValidateFields = {};
+            var toVerifyFields = {};
             if (typeof field == 'undefined') {
-                toValidateFields = fields;
+                toVerifyFields = fields;
             } else if (S.isString(field)) {
                 var newfield = fields[field];
                 if(newfield) {
-                    toValidateFields[field] = newfield;
+                    toVerifyFields[field] = newfield;
                 }else{
                     return totalResults;
                 }
             } else if (S.isArray(field)) {
                 S.each(field, function (value, index) {
-                    toValidateFields[value] = fields[value];
+                    toVerifyFields[value] = fields[value];
                 });
             }
-            S.each(toValidateFields, function (rules, fieldName) {
-                var fieldResult = self._validate(fieldName, rules);
+            S.each(toVerifyFields, function (rules, fieldName) {
+                var fieldResult = self._verify(fieldName, rules);
                 if (!fieldResult.succeed) {
                     totalResults.succeed = false;
                 }
@@ -171,7 +171,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
             }
             return totalResults;
         },
-        _validate: function (field, rules) {
+        _verify: function (field, rules) {
             var self = this;
             var valueFn = self.get('valueFn');
             var disabled = self.get('disabled');
@@ -402,7 +402,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
             errorClass: {
                 value: 'verify-wrap-error'
             },
-            autoValidate :{
+            autoVerify :{
                 value:true
             },
             errorTipTpl:{
@@ -410,7 +410,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
             }
         }
     });
-    return verify;
+    return Verify;
 }, {requires: ['node', 'base','./index.css']});
 
 
