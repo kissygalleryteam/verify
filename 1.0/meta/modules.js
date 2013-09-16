@@ -1,3 +1,3 @@
 config({
-    'gallery/validation/index': {requires: ['node','base']}
+    'gallery/verify/index': {requires: ['node','base']}
 });

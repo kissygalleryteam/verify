@@ -1,25 +1,25 @@
 /*
 combined files : 
 
-gallery/validation/1.0/index
+gallery/verify/1.0/index
 
 */
 /**
  * @fileoverview
  * @author kissy-team<kissy-team@gmail.com>
- * @module validation
+ * @module verify
  **/
-KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
+KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
 
     /**
-     * @class Validation
+     * @class verify
      * @constructor
      * @extends Base
      */
-    function Validation() {
-        Validation.superclass.constructor.apply(this, arguments);
+    function verify() {
+        verify.superclass.constructor.apply(this, arguments);
         this.init();
     }
 
@@ -84,10 +84,10 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
         }
     };
 
-    S.extend(Validation, Base, /** @lends Validation.prototype*/{
+    S.extend(verify, Base, /** @lends verify.prototype*/{
         init: function () {
             var self = this;
-            self.publish('validate');
+            self.publish('verify');
             self.publish('fail');
             self._bindEvent();
         },
@@ -101,16 +101,16 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                      var node =  nodeFn(name);
                     if(!node) return;
                     node.on('change',function(e){
-                        self.validate(name);
+                        self.verify(name);
                     });
                     node.on('blur',function(e){
                        if(node.val()==''){
-                           self.validate(name);
+                           self.verify(name);
                        }
                     });
                 });
             }
-            self.on('validate',function (fieldResult) {
+            self.on('verify',function (fieldResult) {
                 var field = fieldResult.field;
                 var succeed = fieldResult.succeed;
                 var info = fieldResult.info;
@@ -136,7 +136,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
         _getFunctionName: function (fn) {
             return typeof fn.name === 'string' ? fn.name : /function\s+([^\{\(\s]+)/.test(fn.toString()) ? RegExp['$1'] : '[Unknown]';
         },
-        validate: function (field) {
+        verify: function (field) {
             var self = this;
             var fields = self.get('fields');
             var firstError = null;
@@ -218,7 +218,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                     break;
                 }
             }
-            self.fire('validate', fieldResult);
+            self.fire('verify', fieldResult);
             return fieldResult;
         },
         add: function (field, val) {
@@ -255,10 +255,10 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             }
             fieldState.info = info;
             if (!fieldState.errorWraper) {
-                var errorWraper = dom.parent('.validation-wrap');
+                var errorWraper = dom.parent('.verify-wrap');
                 if(!errorWraper){
-                    S.DOM.wrap(dom, S.DOM.create('<span class="validation-wrap"/>'));
-                    errorWraper = dom.parent('.validation-wrap');
+                    S.DOM.wrap(dom, S.DOM.create('<span class="verify-wrap"/>'));
+                    errorWraper = dom.parent('.verify-wrap');
                 }
                 fieldState.errorWraper = errorWraper;
             }
@@ -373,7 +373,7 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
             that.set('fields',null);
         }
 
-    }, {ATTRS: /** @lends Validation*/{
+    }, {ATTRS: /** @lends verify*/{
             fields: {
                 value: {}
             },
@@ -400,17 +400,17 @@ KISSY.add('gallery/validation/1.0/index',function (S, Node, Base) {
                 value: {}
             },
             errorClass: {
-                value: 'validation-wrap-error'
+                value: 'verify-wrap-error'
             },
             autoValidate :{
                 value:true
             },
             errorTipTpl:{
-                value:'<div class="validation-errortip hidden validation-errortip-left J_ErrorValidation"><em class=" tooltip-arrow tooltip-arrow-left tooltip-arrow-horizontal-left" style="top: 6.8px;"></em><span class="tooltip-close"></span><span class="tooltip-confirm"></span><div class="content-box J_InfoContainer"></div></div>'
+                value:'<div class="verify-errortip hidden verify-errortip-left J_ErrorValidation"><em class=" tooltip-arrow tooltip-arrow-left tooltip-arrow-horizontal-left" style="top: 6.8px;"></em><span class="tooltip-close"></span><span class="tooltip-confirm"></span><div class="content-box J_InfoContainer"></div></div>'
             }
         }
     });
-    return Validation;
+    return verify;
 }, {requires: ['node', 'base','./index.css']});
 
 

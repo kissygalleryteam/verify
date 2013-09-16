@@ -1,13 +1,17 @@
 ## 综述
 
-validation是用于表单验证。由于业务局限性，自身所提供的样式仅适合于垂直表单验证。
+validation是用于表单验证。组件自身所提供的样式仅适合于垂直表单验证。
+
+表单验证的配置非常灵活，既可以选择内置的规则，也可以自己指定校验方法。
+
+
 
 ## 快速使用
 
 ### 初始化组件
 
-     S.use('gallery/validation/1.0/index', function (S, Validation) {
-             var validation = new Validation({
+     S.use('gallery/verify/1.0/index', function (S, verify) {
+             var verify = new verify({
                  fields:{
                      name: [
                          ['required', '请填写联系人姓名。'],
@@ -54,7 +58,7 @@ validation是用于表单验证。由于业务局限性，自身所提供的样�
 
 ## API说明
 
-* validate（field）field[string]要校验的域。不传时校验所有的域
+* verify（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
 * add（field,value） 添加校验域。field[string] 域名 ;value 规则
 * remove(field) 移除校验域。field[string] 域名 ;
 * modify(field ,value) 修改某个域的校验规则。field[string] 域名 ;value 规则

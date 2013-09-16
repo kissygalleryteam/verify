@@ -18,14 +18,14 @@
             <li>
                 <label class="label" for="J_ContacterName">姓名： </label>
                 <em class="required">*</em>
-                <span class="validation-wrap">
+                <span class="verify-wrap">
                 <input type="text" class="input-text" id="name" name="relationName"/>
             </span>
             </li>
             <li>
                 <label class="label" for="J_ContacterTel"> 手机号码： </label>
                 <em class="required">*</em>
-                <span class="validation-wrap">
+                <span class="verify-wrap">
                     <input type="text" class="input-text" id="tel" placeholder="通知机票出票状态和航班信息"
                            name="relationMobile"/>
                 </span>
@@ -33,14 +33,14 @@
             <li>
                 <label class="label" for="J_ContacterPhone"> 备选号码： </label>
                 <em class="required">&nbsp;</em>
-                <span class="validation-wrap">
+                <span class="verify-wrap">
                     <input type="text" class="input-text" id="phone" placeholder="" name="relationPhone"/>
                 </span>
             </li>
             <li>
                 <label class="label" for="J_ContacterEmail"> 电子邮箱： </label>
                 <em class="required">*</em>
-                <span class="validation-wrap">
+                <span class="verify-wrap">
                     <input type="text" class="input-text" id="email" placeholder="通知机票出票状态和航班信息"
                            name="relationEmail"/>
                 </span>
@@ -64,8 +64,8 @@
         });
     }
 
-    S.use('gallery/validation/1.0/index', function (S, Validation) {
-         var validation = new Validation({
+    S.use('gallery/verify/1.0/index', function (S, verify) {
+         var verify = new verify({
              fields:{
                  name: [
                      ['required', '请填写联系人姓名。'],

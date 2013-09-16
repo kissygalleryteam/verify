@@ -1,12 +1,12 @@
 {
-    "name": "validation",
+    "name": "verify",
     "version": "1.0",
     "desc": "",
     "cover": "",
     "tag":"",
     "author": {
-        "name": "kissy-team",
-        "email": "kissy-team@gmail.com",
+        "name": "迟伤",
+        "email": "chishang.lcw@gmail.com",
         "page": ""
     },
     "type": "kissy-gallery",

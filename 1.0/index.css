@@ -71,14 +71,14 @@
     border-color: #0092d2;
 }
 
-.validation-wrap{
+.verify-wrap{
     display:inline-block;
     *display: inline;
     *zoom: 1;
     position:relative;
     line-height: 32px;
 }
-.validation-wrap-error {
+.verify-wrap-error {
     background: url("http://img01.taobaocdn.com/tps/i1/T1sstPXvhdXXaSQP_X-16-16.png") no-repeat 247px 12px;
     padding-right:30px;
 }
@@ -171,7 +171,7 @@
     ERROR TIP
 */
 
-.validation-errortip {
+.verify-errortip {
     background: none repeat scroll 0 0 #FFF1F1;
     border: 1px solid #ff2000;
     /*border-radius: 3px 3px 3px 3px;*/
@@ -188,27 +188,27 @@
     margin-left:10px;
 }
 
-.validation-errortip-down {
+.verify-errortip-down {
     padding-bottom: 5px;
     padding-top: 0;
 }
 
-.validation-errortip-left {
+.verify-errortip-left {
     padding: 0;
 }
 
-.validation-errortip-right {
+.verify-errortip-right {
     padding: 0;
 }
 
-.validation-errortip .content-box {
+.verify-errortip .content-box {
     background: #fff1f1 url("http://img03.taobaocdn.com/tps/i3/T1tLtFXrpgXXc_eAHa-19-18.png") no-repeat 7px 6px;
     border-radius: 0 0 3px 3px;
     padding: 4px 10px 4px 30px;
     text-align: justify;
 }
 
-.validation-errortip .tooltip-arrow {
+.verify-errortip .tooltip-arrow {
     font-size: 0;
     height: 11px;
     line-height: 0;
@@ -216,19 +216,19 @@
     width: 22px;
 }
 
-.validation-errortip .tooltip-arrow-up {
+.verify-errortip .tooltip-arrow-up {
     /*background: url("http://img01.taobaocdn.com/tps/i1/T1uH_mXcXXXXbbQ6Hj-60-30.png") no-repeat scroll 0 0 transparent;*/
     background: url("http://img02.taobaocdn.com/tps/i2/T1pCLlXnFpXXbbQ6Hj-60-30.png") no-repeat scroll 0 0 transparent;
     top: -11px;
 }
 
-.validation-errortip .tooltip-arrow-down {
+.verify-errortip .tooltip-arrow-down {
     /*background: url("http://img01.taobaocdn.com/tps/i1/T1uH_mXcXXXXbbQ6Hj-60-30.png") no-repeat scroll 0 -16px transparent;*/
     background: url("http://img02.taobaocdn.com/tps/i2/T1pCLlXnFpXXbbQ6Hj-60-30.png") no-repeat scroll 0 -16px transparent;
     bottom: -11px;
 }
 
-.validation-errortip .tooltip-arrow-left {
+.verify-errortip .tooltip-arrow-left {
     background: url("http://img02.taobaocdn.com/tps/i2/T1XoXHXvRcXXah7eDX-15-20.gif") no-repeat scroll 0px -2px transparent;
     height: 17px;
     left: -9px;
@@ -236,26 +236,26 @@
     width: 11px;
 }
 
-.validation-errortip .tooltip-arrow-right {
+.verify-errortip .tooltip-arrow-right {
     background: url("http://img03.taobaocdn.com/tps/i3/T1Ap6kXnFrXXcDDMbb-9-17.png") no-repeat scroll 0 0 transparent;
     bottom: -9px;
     width: 9px;
     height: 17px;
 }
 
-.validation-errortip .tooltip-arrow-horizontal-left {
+.verify-errortip .tooltip-arrow-horizontal-left {
     left: 20px;
 }
 
-.validation-errortip .tooltip-arrow-horizontal-right {
+.verify-errortip .tooltip-arrow-horizontal-right {
     right: -9px;
 }
 
-.validation-errortip-left .tooltip-arrow-horizontal-left {
+.verify-errortip-left .tooltip-arrow-horizontal-left {
     left: -9px;
 }
 
-.validation-errortip .tooltip-close {
+.verify-errortip .tooltip-close {
     position: absolute;
     right: 10px;
     top: 10px;
