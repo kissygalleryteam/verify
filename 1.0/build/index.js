@@ -262,11 +262,11 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
                 }
                 fieldState.errorWraper = errorWraper;
             }
-            dom.addClass('validationError').removeClass('validationNormal');
+            dom.addClass('verifyError').removeClass('validationNormal');
             self._showTip(fieldState);
             if (dom.prop('type') === 'text') {
                 function _hideOtherTips(){
-                    if(dom.hasClass('validationError')) {
+                    if(dom.hasClass('verifyError')) {
                         self._hideOtherTips(fieldState);
                     }
                 }
@@ -296,7 +296,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
                 return;
             }
             var fieldState = state[field];
-            dom.removeClass('validationError').addClass('validationNormal');
+            dom.removeClass('verifyError').addClass('validationNormal');
             if(fieldState){
                 self._hideTips(fieldState);
                 self._hideIcon(fieldState);
@@ -348,7 +348,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
         _showIcon: function (fieldState) {
             var self = this;
             var errorClass = self.get('errorClass');
-            if (fieldState && fieldState.errorWraper && fieldState.errorWraper.one('.validationError')) {
+            if (fieldState && fieldState.errorWraper && fieldState.errorWraper.one('.verifyError')) {
                 fieldState.errorWraper.addClass(errorClass);
             }
 

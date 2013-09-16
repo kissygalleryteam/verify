@@ -119,18 +119,18 @@
     margin-right: 3px;
 }
 
-.validationError {
+.verifyError {
     border: 1px solid #ff2000;
     -webkit-box-shadow: 0 0 3 #fecbc8 inset;
     -moz-box-shadow: 0 0 3 #fecbc8 inset;
     box-shadow: 0 0 3px #fecbc8 inset;
 }
 
-.validationError:hover {
+.verifyError:hover {
     border-color: #ff2000;
 }
 
-.validationError:focus {
+.verifyError:focus {
     border-color: #ff2000;
 }
 
