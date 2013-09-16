@@ -402,7 +402,7 @@ KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
             errorClass: {
                 value: 'verify-wrap-error'
             },
-            autoVerify :{
+            autoValidate :{
                 value:true
             },
             errorTipTpl:{

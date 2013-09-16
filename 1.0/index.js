@@ -396,7 +396,7 @@ KISSY.add(function (S, Node, Base) {
             errorClass: {
                 value: 'verify-wrap-error'
             },
-            autoVerify :{
+            autoValidate :{
                 value:true
             },
             errorTipTpl:{
