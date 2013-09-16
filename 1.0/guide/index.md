@@ -54,13 +54,13 @@ verify,灵活的垂直表单验证组件。
 * nodeFn [function] 出错时错误节点，默认为input节点 
 * valueFn [function] 验证时的value值获取,默认获取input的值 
 * disabled 被禁用的域 。 默认为空
-* autoValidate 是否在input节点的change事件发生时，自动触发校验。默认 true
+* autoVerify 是否在input节点的change事件发生时，自动触发校验。默认 true
 
 
 
 ## API说明
 
-* validate（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
+* verify（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
 * add（field,value） 添加校验域。field[string] 域名 ;value 规则
 * remove(field) 移除校验域。field[string] 域名 ;
 * modify(field ,value) 修改某个域的校验规则。field[string] 域名 ;value 规则

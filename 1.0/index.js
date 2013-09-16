@@ -130,7 +130,7 @@ KISSY.add(function (S, Node, Base) {
         _getFunctionName: function (fn) {
             return typeof fn.name === 'string' ? fn.name : /function\s+([^\{\(\s]+)/.test(fn.toString()) ? RegExp['$1'] : '[Unknown]';
         },
-        validate: function (field) {
+        verify: function (field) {
             var self = this;
             var fields = self.get('fields');
             var firstError = null;
@@ -256,7 +256,7 @@ KISSY.add(function (S, Node, Base) {
                 }
                 fieldState.errorWraper = errorWraper;
             }
-            dom.addClass('verifyError').removeClass('validationNormal');
+            dom.addClass('verifyError').removeClass('verifyNormal');
             self._showTip(fieldState);
             if (dom.prop('type') === 'text') {
                 function _hideOtherTips(){
@@ -290,7 +290,7 @@ KISSY.add(function (S, Node, Base) {
                 return;
             }
             var fieldState = state[field];
-            dom.removeClass('verifyError').addClass('validationNormal');
+            dom.removeClass('verifyError').addClass('verifyNormal');
             if(fieldState){
                 self._hideTips(fieldState);
                 self._hideIcon(fieldState);
@@ -396,7 +396,7 @@ KISSY.add(function (S, Node, Base) {
             errorClass: {
                 value: 'verify-wrap-error'
             },
-            autoValidate :{
+            autoVerify :{
                 value:true
             },
             errorTipTpl:{
