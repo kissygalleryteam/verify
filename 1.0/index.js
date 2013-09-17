@@ -6,7 +6,6 @@
 KISSY.add(function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
-
     /**
      * @class verify
      * @constructor
