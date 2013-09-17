@@ -51,10 +51,11 @@ verify,灵活的垂直表单验证组件。
 	* number(info)数字校验。非纯数字时报错（info默认值：'亲，只能输入数字。'）
 	* date(info) 日期格式校验。不满足YYYY-MM-DD时报错（info默认值：'请填写正确的日期格式：YYYY-MM-DD。'）
 	* pattern(reg,info) reg 正则表达式 。不匹配正则时报错（info默认值：'亲，输入格式有误。'）
-* nodeFn [function] 出错时错误节点，默认为input节点 
-* valueFn [function] 验证时的value值获取,默认获取input的值 
-* disabled 被禁用的域 。 默认为空
-* autoVerify 是否在input节点的change事件发生时，自动触发校验。默认 true
+
+* nodeFn {function} 要校验的表单域节点，默认按fields的name值对应节点id获取
+* valueFn {function} 验证时的value值获取,默认获取对应input的value值（如果域节点不是input 默认返回''空字符串)
+* disabled {array} 被禁用的域 。 默认为空数组
+* autoVerify {boolean}是否在input节点的change事件发生时，自动触发校验。默认 true
 
 
 
