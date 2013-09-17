@@ -35,44 +35,218 @@ verify,灵活的垂直表单验证组件。
 
 ## confing 参数
 
-* fields [object] 待验证域，对应属性值格式可以为数组、字符串、函数
-	* 函数 此时可以自己定义验证方法，回调参数为验证时的value值。返回格式为[isSuceess{boolean},info{string}]
-	* 数组 此时第一个数组项为规则名称，最后一个为错误提示文案，中间的为其他参数
-	* 字符串 此时字符串既为规则名称
+ 
+
+
+
+
+<table>
+<tr>
+<td>字段</td>
+<td>类型</td>
+<td>含义</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>object</td>
+<td>要校验的域。</td>
+<td>fields对应的value值是一个数值，每个数组的项表示一个校验规则集，可以是数组、函数或字符串，具体意义参见“内置规则校验”表格</td>
+</tr>
+<tr>
+<td>nodeFn</td>
+<td>function</td>
+<td>要校验的表单域节点</td>
+<td>默认按fields的name值对应节点id获取</td>
+</tr>
+<tr>
+<td>valueFn</td>
+<td>function </td>
+<td>验证时的value值获取</td>
+<td>默认获取对应input的value值（如果域节点不是input 默认返回''空字符串)</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>array</td>
+<td>被禁用的域</td>
+<td>默认为空数组 </td>
+</tr>
+<tr>
+<td>autoVerify</td>
+<td>(field,isable)<br/>isable[boolean]是否可用 true可以，false 不可以 </td>
+<td>boolean</td>
+<td>默认 true</td>
+</tr>
+<tr>
+</table>
+
+内置规则校验
+
+* 函数 此时可以自己定义验证方法，回调参数为验证时的value值。返回格式为[isSuceess{boolean},info{string}]
+* 数组 此时第一个数组项为规则名称，最后一个为错误提示文案，中间的为其他参数
+* 字符串 此时字符串既为规则名称
+
+<table>
+<tr>
+<td>规则名称</td>
+<td>含义</td>
+<td>参数</td>
+<td>规则</td>
+<td>默认错误值</td>
+</tr>
+<tr>
+<td>required</td>
+<td>必填</td>
+<td>info</td>
+<td>为空时不通过</td>
+<td>'亲，不能为空。'</td>
+</tr>
+<tr>
+<td>name</td>
+<td>名字</td>
+<td>info</td>
+<td>名字中有中英文之外的字符时不通过</td>
+<td>姓名只能由中文或英文字母组成，请检查是否存在其它字符</td>
+</tr>
+<tr>
+<td>length</td>
+<td>长度</td>
+<td>[min,max,]info</td>
+<td>先校验最小长度 ;再校验最大长度</td>
+<td>亲，长度至少需要min || 亲，长度最多不能超过max</td>
+</tr>
+<tr>
+<td>email</td>
+<td>邮件格式</td>
+<td>info</td>
+<td> </td>
+<td>亲，请输入正确的email格式。</td>
+</tr>
+<tr>
+<td>english</td>
+<td>英文字母</td>
+<td>info</td>
+<td>规则</td>
+<td>亲，这里只能输入英文字母。</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>简单的手机号码校验</td>
+<td>info</td>
+<td>只要是纯数字和-的组合即可</td>
+<td>手机号码必须为数字。</td>
+</tr>
+<tr>
+<td>range</td>
+<td>含义</td>
+<td>min,max,info</td>
+<td>数值区间</td>
+<td>亲，只能在{min}至{max}之间</td>
+</tr>
+<tr>
+<td>number</td>
+<td>含义</td>
+<td>info</td>
+<td>规则</td>
+<td>亲，只能输入数字。</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>正则表达式</td>
+<td>info</td>
+<td>不匹配正则时报错</td>
+<td>亲，输入格式有误。</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期格式</td>
+<td>info</td>
+<td>不满足YYYY-MM-DD时报错</td>
+<td>请填写正确的日期格式：YYYY-MM-DD。</td>
+</tr>
+</table>
 	
-	组件为大家提供了一些基本的校验规则(info为错误提示文案)：
-	* required(info) 必填项。 为空时报错（info默认值：'亲，不能为空。'）
-	* name (info) 名字校验。 名字中有中英文之外的字符时报错（info默认值：''姓名只能由中文或英文字母组成，请检查是否存在其它字符'）。
-	* length(min,max,]info) 长度校验 。先校验最小长度 （info默认值：'亲，长度至少需要min'）,再校验最大长度（info默认值：'亲，长度最多不能超过max'）。
-	* email(info) 邮件格式验证 （info默认值：'亲，请输入正确的email格式。'）
-	* english(info) 英文字母校验 （info默认值：'亲，这里只能输入英文字母。'）
-	* mobile(info) 简单的手机号码校验，只有是纯数字和-的组合即可。（info默认值：'手机号码必须为数字。'）
-	* range(min,max,info)min 最小值。max 最大值。（info默认值：'亲，只能在{min}至{max}之间。'）
-	* number(info)数字校验。非纯数字时报错（info默认值：'亲，只能输入数字。'）
-	* date(info) 日期格式校验。不满足YYYY-MM-DD时报错（info默认值：'请填写正确的日期格式：YYYY-MM-DD。'）
-	* pattern(reg,info) reg 正则表达式 。不匹配正则时报错（info默认值：'亲，输入格式有误。'）
-
-* nodeFn {function} 要校验的表单域节点，默认按fields的name值对应节点id获取
-* valueFn {function} 验证时的value值获取,默认获取对应input的value值（如果域节点不是input 默认返回''空字符串)
-* disabled {array} 被禁用的域 。 默认为空数组
-* autoVerify {boolean}是否在input节点的change事件发生时，自动触发校验。默认 true
-
-
+	 
+	 
+ 
 
 ## API说明
+<table>
+<tr>
+<td>方法</td>
+<td>参数</td>
+<td>含义</td>
+<td>返回值</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>(field{string})</td>
+<td>要校验的域。不传时校验所有的域</td>
+<td>{succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}</td>
+</tr>
+<tr>
+<td>add</td>
+<td>(field,value)<br/>field 域名 ;value 规则</td>
+<td>添加校验域</td>
+<td></td>
+</tr>
+<tr>
+<td>remove</td>
+<td>(field) </td>
+<td>移除校验域</td>
+<td> </td>
+</tr>
+<tr>
+<td>modify</td>
+<td>(field ,value)</td>
+<td>修改某个域的校验规则</td>
+<td> </td>
+</tr>
+<tr>
+<td>disable </td>
+<td>(field,isable)<br/>isable[boolean]是否可用 true可以，false 不可以 </td>
+<td>禁用/启用某个域</td>
+<td> </td>
+</tr>
+<tr>
+<td>reset</td>
+<td>(field)<br/>field要重置的域，不传时为所有域
+</td>
+<td>重置状态</td>
+<td> </td>
+</tr>
+<tr>
+<td>destroy </td>
+<td></td>
+<td>注销</td>
+<td> </td>
+</tr>
+ 
+<tr>
+<td>error</td>
+<td></td>
+<td>显示错误信息并标注错误状态</td>
+<td> </td>
+</tr>
+</table>
 
-* verify（field）field[string]要校验的域。不传时校验所有的域。返回数据格式：   {succeed:boolean,results:[{succeed:boolean,info:'errMsg' },firstError]}
-* add（field,value） 添加校验域。field[string] 域名 ;value 规则
-* remove(field) 移除校验域。field[string] 域名 ;
-* modify(field ,value) 修改某个域的校验规则。field[string] 域名 ;value 规则
-* disable(field,isable) 禁用/启用某个域。 field[string] 域名 ;isable[boolean]是否可用 true可以，false 不可以
-* reset(field)重置状态。field要重置的域，不传时为所有域
-* destroy 注销
-* error 显示错误信息并标注错误状态
 
 ## 提供事件
-
-verify 校验结束之后，参数：field 域 info 信息 succeed 是否成功
-fail 校验失败之后 参数： field 域 info 信息
-
+<table>
+<tr>
+<td>事件名称</td>
+<td>触发条件</td>
+<td>提供数据</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>每一个域校验结束之后</td>
+<td>field 域 info 信息 succeed 是否成功（true 成功 false 失败）</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>每一个域校验失败之后</td>
+<td>field 域 info 信息 </td>
+</tr>
+</table>
 
