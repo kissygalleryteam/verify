@@ -12,7 +12,6 @@ gallery/verify/1.0/index
 KISSY.add('gallery/verify/1.0/index',function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
-
     /**
      * @class verify
      * @constructor
