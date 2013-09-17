@@ -30,10 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.23474178">
+            <state line="10" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="230" column="38" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.4397496">
               <folding />
             </state>
           </provider>
@@ -59,8 +68,8 @@
         <option value="$PROJECT_DIR$/1.0/build/index.js" />
         <option value="$PROJECT_DIR$/1.0/index.js" />
         <option value="$PROJECT_DIR$/abc.json" />
-        <option value="$PROJECT_DIR$/1.0/guide/index.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/1.0/guide/index.md" />
       </list>
     </option>
   </component>
@@ -155,8 +164,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -315,18 +324,9 @@
         <state line="228" column="33" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.02347418" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="38" selection-start="1813" selection-end="1813" vertical-scroll-proportion="1.3178914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.0/build/index-min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1780" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="1780" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/abc.json">
@@ -338,32 +338,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/build/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="404" column="12" selection-start="14234" selection-end="14234" vertical-scroll-proportion="0.5686901">
-          <folding>
-            <marker date="1379341788000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="404" column="12" selection-start="14234" selection-end="14234" vertical-scroll-proportion="0.5686901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="21" selection-start="7849" selection-end="7849" vertical-scroll-proportion="-3.7859426">
-          <folding>
-            <marker date="1379341761000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="211" column="21" selection-start="7849" selection-end="7849" vertical-scroll-proportion="-3.7859426" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.0/build/index-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5678" selection-start="5759" selection-end="5759" vertical-scroll-proportion="0.023961661">
-          <folding />
-        </state>
+        <state line="2" column="5678" selection-start="5759" selection-end="5759" vertical-scroll-proportion="0.023961661" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.23474178">
+        <state line="10" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.0/guide/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="38" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.4397496">
           <folding />
         </state>
       </provider>
