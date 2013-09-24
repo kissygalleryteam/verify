@@ -91,15 +91,15 @@ KISSY.add(function (S, Node, Base) {
             var nodeFn = self.get('nodeFn');
             if(autoVerify){
                 S.each(fields,function(value,name){
-                    var node =  nodeFn(name);
+                     var node =  nodeFn(name);
                     if(!node) return;
                     node.on('change',function(e){
                         self.verify(name);
                     });
                     node.on('blur',function(e){
-                        if(node.val()==''){
-                            self.verify(name);
-                        }
+                       if(node.val()==''){
+                           self.verify(name);
+                       }
                     });
                 });
             }
@@ -247,11 +247,16 @@ KISSY.add(function (S, Node, Base) {
                 };
             }
             fieldState.info = info;
+            var errorWraper;
             if (!fieldState.errorWraper) {
-                var errorWraper = dom.parent('.verify-wrap');
-                if(!errorWraper){
-                    S.DOM.wrap(dom, S.DOM.create('<span class="verify-wrap"/>'));
+                if(self.get('errorWraper')){
+                    errorWraper = S.one(self.get('errorWraper'));
+                }else{
                     errorWraper = dom.parent('.verify-wrap');
+                    if(!errorWraper){
+                        S.DOM.wrap(dom, S.DOM.create('<span class="verify-wrap"/>'));
+                        errorWraper = dom.parent('.verify-wrap');
+                    }
                 }
                 fieldState.errorWraper = errorWraper;
             }
@@ -318,14 +323,16 @@ KISSY.add(function (S, Node, Base) {
             var self = this;
             if(!fieldState.errorTip){
                 var tpl = self.get('errorTipTpl');
-                fieldState.errorWraper.append(tpl);
-                fieldState.errorTip = fieldState.errorWraper.one('.J_ErrorValidation');
-                fieldState.infoWraper =  fieldState.errorTip.one('.J_InfoContainer');
+                var errorTip = S.DOM.create(tpl);
+
+                fieldState.errorWraper.append(errorTip);
+                fieldState.errorTip = S.one(errorTip);
+                fieldState.infoWraper =  fieldState.errorTip.one('.J_InfoContainer') || fieldState.errorTip ;
                 var node = fieldState.node;
                 var width = node.outerWidth();
                 fieldState.errorTip.css({
                     left:width
-                })
+                });
             }
             fieldState.infoWraper.html(fieldState.info);
             fieldState.errorTip.removeClass('hidden');
@@ -367,41 +374,44 @@ KISSY.add(function (S, Node, Base) {
         }
 
     }, {ATTRS: /** @lends verify*/{
-        fields: {
-            value: {}
-        },
-        nodeFn: {
-            value: function (field) {
-                return S.one('#' + field);
-            }
-        },
-        valueFn: {
-            value: function (field) {
-                var nodeFn = this.get('nodeFn');
-                var n = nodeFn(field);
-                var v = n && n.val();
-                if (!v) {
-                    return '';
+            fields: {
+                value: {}
+            },
+            nodeFn: {
+                value: function (field) {
+                    return S.one('#' + field);
                 }
-                return v;
+            },
+            valueFn: {
+                value: function (field) {
+                    var nodeFn = this.get('nodeFn');
+                    var n = nodeFn(field);
+                    var v = n && n.val();
+                    if (!v) {
+                        return '';
+                    }
+                    return v;
+                }
+            },
+            disabled: {
+                value: {}
+            },
+            state: {
+                value: {}
+            },
+            errorClass: {
+                value: 'verify-wrap-error'
+            },
+            autoVerify :{
+                value:true
+            },
+            errorTipTpl:{
+                value:'<div class="verify-errortip hidden verify-errortip-left"><em class=" tooltip-arrow tooltip-arrow-left tooltip-arrow-horizontal-left" style="top: 6.8px;"></em><span class="tooltip-close"></span><span class="tooltip-confirm"></span><div class="content-box J_InfoContainer"></div></div>'
+            },
+            errorWraper:{
+                value:null
             }
-        },
-        disabled: {
-            value: {}
-        },
-        state: {
-            value: {}
-        },
-        errorClass: {
-            value: 'verify-wrap-error'
-        },
-        autoVerify :{
-            value:true
-        },
-        errorTipTpl:{
-            value:'<div class="verify-errortip hidden verify-errortip-left J_ErrorValidation"><em class=" tooltip-arrow tooltip-arrow-left tooltip-arrow-horizontal-left" style="top: 6.8px;"></em><span class="tooltip-close"></span><span class="tooltip-confirm"></span><div class="content-box J_InfoContainer"></div></div>'
         }
-    }
     });
     return Verify;
 }, {requires: ['node', 'base','./index.css']});

@@ -65,25 +65,25 @@
     }
 
     S.use('gallery/verify/1.0/index', function (S, verify) {
-         var verify = new verify({
-             fields:{
-                 name: [
-                     ['required', '请填写联系人姓名。'],
-                     ['length', 0, 30, '联系人姓名不要超过30个字']
-                 ],
-                 tel: [
-                     ['required', '请填写联系人手机号码。'],
-                     'mobile'
-                 ],
-                 phone: [
-                     ['mobile', '备选号码必须为数字']
-                 ],
-                 email: [
-                     ['required', '请填写联系人邮箱。'],
-                     ['email', '请检查电子邮箱的格式是否正确。']
-                 ]
-             }
-         });
+        var verify = new verify({
+            fields:{
+                name: [
+                    ['required', '请填写联系人姓名。'],
+                    ['length', 0, 30, '联系人姓名不要超过30个字']
+                ],
+                tel: [
+                    ['required', '请填写联系人手机号码。'],
+                    'mobile'
+                ],
+                phone: [
+                    ['mobile', '备选号码必须为数字']
+                ],
+                email: [
+                    ['required', '请填写联系人邮箱。'],
+                    ['email', '请检查电子邮箱的格式是否正确。']
+                ]
+            }
+        });
 
     });
 </script>

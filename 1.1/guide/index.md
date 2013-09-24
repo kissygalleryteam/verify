@@ -81,7 +81,7 @@ verify,灵活的垂直表单验证组件。
 <td>errorTipTpl</td>
 <td>html片段</td>
 <td>string</td>
-<td>如果想重置默认的提示样式，可以传入自定义的template，但要注意的是：错误容器必须含有J_ErrorValidation这个JS的class钩子，显示错误文案的容器加J_InfoContainer这个JS的class钩子</td>
+<td>如果想重置默认的提示样式，可以传入自定义的template，但要注意的是：显示错误文案的容器需加J_InfoContainer这个JS的class钩子,否则会直接在错误容器里面写html</td>
 </tr> 
 </table>
 
