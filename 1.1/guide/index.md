@@ -73,16 +73,22 @@ verify,灵活的垂直表单验证组件。
 </tr>
 <tr>
 <td>autoVerify</td>
-<td>(field,isable)<br/>isable[boolean]是否可用 true可以，false 不可以 </td>
 <td>boolean</td>
+<td>是否自动校验 </td>
 <td>默认 true</td>
 </tr> 
 <tr>
 <td>errorTipTpl</td>
 <td>html片段</td>
-<td>string</td>
+<td>错误提示dom结构</td>
 <td>如果想重置默认的提示样式，可以传入自定义的template，但要注意的是：显示错误文案的容器需加J_InfoContainer这个JS的class钩子,否则会直接在错误容器里面写html</td>
-</tr> 
+</tr>
+<tr>
+<td>errorWraper</td>
+<td>KISSY Selector</td>
+<td>错误提示append的位置</td>
+<td>可以指定错误提示显示位置，默认为null,此时在域所在节点的父元素下append。由于没有指定的样式和交互，如果选择了这个参数，可能需要自行调整交互</td>
+</tr>
 </table>
 
 内置规则校验
