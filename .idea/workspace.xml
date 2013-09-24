@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.1/guide/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="30" selection-start="153" selection-end="153" vertical-scroll-proportion="0.33546326">
+            <state line="11" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="7" column="33" selection-start="270" selection-end="270" vertical-scroll-proportion="0.16773163">
               <folding />
             </state>
           </provider>
@@ -444,16 +444,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/1.1/guide/index.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="11" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.1/guide/index.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="153" selection-end="153" vertical-scroll-proportion="0.33546326">
+        <state line="7" column="33" selection-start="270" selection-end="270" vertical-scroll-proportion="0.16773163">
           <folding />
         </state>
       </provider>
