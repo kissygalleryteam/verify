@@ -1,8 +1,3 @@
-/**
- * @fileoverview
- * @author kissy-team<kissy-team@gmail.com>
- * @module verify
- **/
 KISSY.add(function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
