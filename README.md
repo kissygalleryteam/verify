@@ -10,8 +10,7 @@
 
     [!]添加了自定义样式。可以通过errorWraper和 errorTipTpl来指定错误提示显示位置和样式。
 
-
- ## 综述
+## 综述
 
  verify,灵活的垂直表单验证组件。
 
@@ -21,9 +20,9 @@
 
 
 
- ## 快速使用
+## 快速使用
 
- ### 初始化组件
+### 初始化组件
 
       S.use('gallery/verify/1.0/index', function (S, verify) {
               var verify = new verify({
@@ -46,7 +45,7 @@
                   }
               });
 
- ## confing 参数
+## confing 参数
 
 
 
@@ -194,7 +193,7 @@
 
 
 
- ## API说明
+## API说明
  <table>
  <tr>
  <td>方法</td>
@@ -255,7 +254,7 @@
  </table>
 
 
- ## 提供事件
+## 提供事件
  <table>
  <tr>
  <td>事件名称</td>
