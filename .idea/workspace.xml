@@ -89,21 +89,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="56" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5511182">
+            <state line="16" column="11" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1.1/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="40" selection-start="9118" selection-end="9129" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1380018246000" expanded="false" signature="14645:14656" placeholder="..." />
+                <marker date="1380019930000" expanded="true" signature="14557:14568" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -139,10 +139,10 @@
         <option value="$PROJECT_DIR$/1.0/index.js" />
         <option value="$PROJECT_DIR$/1.0/demo/index.html" />
         <option value="$PROJECT_DIR$/abc.json" />
-        <option value="$PROJECT_DIR$/1.1/index.js" />
         <option value="$PROJECT_DIR$/1.1/demo/index.html" />
         <option value="$PROJECT_DIR$/1.1/guide/index.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/1.1/index.js" />
       </list>
     </option>
   </component>
@@ -405,15 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.1/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="40" selection-start="9118" selection-end="9129" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1380018246000" expanded="false" signature="14645:14656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.1/build/index-min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -453,8 +444,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="56" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5511182">
+        <state line="16" column="11" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.1/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1380019930000" expanded="true" signature="14557:14568" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
