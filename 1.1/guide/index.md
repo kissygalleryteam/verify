@@ -12,7 +12,7 @@ verify,灵活的垂直表单验证组件。
 
 ### 初始化组件
 
-     S.use('gallery/verify/1.0/index', function (S, verify) {
+     S.use('gallery/verify/1.1/index', function (S, verify) {
              var verify = new verify({
                  fields:{
                      name: [
