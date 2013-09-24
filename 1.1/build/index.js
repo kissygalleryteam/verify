@@ -4,11 +4,6 @@ combined files :
 gallery/verify/1.1/index
 
 */
-/**
- * @fileoverview
- * @author kissy-team<kissy-team@gmail.com>
- * @module verify
- **/
 KISSY.add('gallery/verify/1.1/index',function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;

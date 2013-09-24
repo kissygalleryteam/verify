@@ -52,7 +52,7 @@
       <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.1/guide/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="90" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
+            <state line="11" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1380018398000" expanded="false" signature="14723:14734" placeholder="..." />
+                <marker date="1380019950000" expanded="false" signature="14635:14646" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -92,7 +92,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="56" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5511182">
+            <state line="7" column="33" selection-start="270" selection-end="270" vertical-scroll-proportion="0.16773163">
               <folding />
             </state>
           </provider>
@@ -101,9 +101,9 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.1/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="40" selection-start="9118" selection-end="9129" vertical-scroll-proportion="0.0">
+            <state line="15" column="66" selection-start="403" selection-end="403" vertical-scroll-proportion="-8.653846">
               <folding>
-                <marker date="1380018246000" expanded="false" signature="14645:14656" placeholder="..." />
+                <marker date="1380019930000" expanded="true" signature="14557:14568" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -139,10 +139,10 @@
         <option value="$PROJECT_DIR$/1.0/index.js" />
         <option value="$PROJECT_DIR$/1.0/demo/index.html" />
         <option value="$PROJECT_DIR$/abc.json" />
-        <option value="$PROJECT_DIR$/1.1/index.js" />
         <option value="$PROJECT_DIR$/1.1/demo/index.html" />
-        <option value="$PROJECT_DIR$/1.1/guide/index.md" />
+        <option value="$PROJECT_DIR$/1.1/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/1.1/guide/index.md" />
       </list>
     </option>
   </component>
@@ -405,15 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.1/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="40" selection-start="9118" selection-end="9129" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1380018246000" expanded="false" signature="14645:14656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.1/build/index-min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -425,7 +416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1380018398000" expanded="false" signature="14723:14734" placeholder="..." />
+            <marker date="1380019950000" expanded="false" signature="14635:14646" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -444,16 +435,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1.1/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="66" selection-start="403" selection-end="403" vertical-scroll-proportion="-8.653846">
+          <folding>
+            <marker date="1380019930000" expanded="true" signature="14557:14568" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1.1/guide/index.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="90" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
+        <state line="11" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="56" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5511182">
+        <state line="7" column="33" selection-start="270" selection-end="270" vertical-scroll-proportion="0.16773163">
           <folding />
         </state>
       </provider>
