@@ -6,9 +6,9 @@
 
 ## changelog
 
-### V1.1
+### V1.2
 
-    [!]添加了自定义样式。可以通过errorWraper和 errorTipTpl来指定错误提示显示位置和样式。
+    [!]对内置规则，全部过滤掉了空值。要求非空，添加required字段。
 
 ## 综述
 
@@ -24,7 +24,7 @@
 
 ### 初始化组件
 
-      S.use('gallery/verify/1.1/index', function (S, verify) {
+      S.use('gallery/verify/1.2/index', function (S, verify) {
               var verify = new verify({
                   fields:{
                       name: [
