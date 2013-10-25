@@ -1,14 +1,14 @@
 ## verify
 
-* 版本：1.2
-* 教程：[http://gallery.kissyui.com/verify/1.2/guide/index.html](http://gallery.kissyui.com/verify/1.2/guide/index.html)
-* demo：[http://gallery.kissyui.com/verify/1.2/demo/index.html](http://gallery.kissyui.com/verify/1.2/demo/index.html)
+* 版本：1.3
+* 教程：[http://gallery.kissyui.com/verify/1.3/guide/index.html](http://gallery.kissyui.com/verify/1.3/guide/index.html)
+* demo：[http://gallery.kissyui.com/verify/1.3/demo/index.html](http://gallery.kissyui.com/verify/1.3/demo/index.html)
 
 ## changelog
 
-### V1.2
+### V1.3
 
-    [!]对内置规则，全部过滤掉了空值。要求非空，添加required字段。
+    [!]添加适配器，提供更安全的环境。
 
 ## 综述
 
@@ -24,7 +24,7 @@
 
 ### 初始化组件
 
-      S.use('gallery/verify/1.2/index', function (S, verify) {
+      S.use('gallery/verify/1.3/index', function (S, verify) {
               var verify = new verify({
                   fields:{
                       name: [
