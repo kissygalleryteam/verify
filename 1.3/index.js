@@ -6,9 +6,9 @@ KISSY.add(function (S, Node, Base) {
      * @constructor
      * @extends Base
      */
-    function Verify() {
-        Verify.superclass.constructor.apply(this, arguments);
-        this.init();
+    function Verify(el,cfg) {
+        Verify.superclass.constructor.call(this, cfg);
+        this.init(el);
     }
 
     var RULES = {
@@ -79,11 +79,13 @@ KISSY.add(function (S, Node, Base) {
     };
 
     S.extend(Verify, Base, /** @lends verify.prototype*/{
-        init: function () {
+        init: function (el) {
             var self = this;
+            self.container = S.one(el);
             self.publish('verify');
             self.publish('fail');
             self._bindEvent();
+
         },
         _bindEvent:function(){
             var self = this;
@@ -269,7 +271,7 @@ KISSY.add(function (S, Node, Base) {
             var dom = nodeFn.call(self,field);
             var state = self.get('state');
             var fieldState = state[field];
-            var container = self.get('container');
+            var container = self.container;
             if (!fieldState) {
                 fieldState = state[field] = {
                     name: field ,
@@ -356,7 +358,7 @@ KISSY.add(function (S, Node, Base) {
         },
         _showTip: function (fieldState) {
             var self = this;
-            var container = self.get('container');
+            var container = self.container;
             if(!fieldState.errorTip){
                 var tpl = self.get('errorTipTpl');
                 var errorTip = S.DOM.create(tpl);
@@ -418,7 +420,7 @@ KISSY.add(function (S, Node, Base) {
             },
             nodeFn: {
                 value: function (field) {
-                    return this.get('container').one('#' + field);
+                    return this.container.one('#' + field);
                 }
             },
             valueFn: {
