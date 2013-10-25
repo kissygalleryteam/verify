@@ -4,14 +4,14 @@
     <list default="true" id="2068a11b-2586-4c42-9ccf-80d4066a83d5" name="Default" comment="" />
     <ignored path="validation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382685146402" ignored="false" />
+    <file path="/index.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382688904489" ignored="false" />
     <file path="/index.html" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382593582274" ignored="false" />
-    <file path="/index.md" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1380018907244" ignored="false" />
+    <file path="/index.md" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382689307246" ignored="false" />
     <file path="/a.dummy" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382582559341" ignored="false" />
     <file path="$PROJECT_DIR$/1.0/meta/alias.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1379339415984" ignored="false" />
     <file path="$PROJECT_DIR$/1.0/meta/modules.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1379339415984" ignored="false" />
     <file path="/.gitignore" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1379381977531" ignored="false" />
-    <file path="/README.md" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382582639109" ignored="false" />
+    <file path="/README.md" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382689211359" ignored="false" />
     <file path="/adatper.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382584174588" ignored="false" />
     <file path="/adapter.js" changelist="2068a11b-2586-4c42-9ccf-80d4066a83d5" time="1382665135545" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.3/demo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="50" selection-start="2904" selection-end="2904" vertical-scroll-proportion="-3.3333333">
+            <state line="78" column="36" selection-start="2869" selection-end="2892" vertical-scroll-proportion="-3.3333333">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.3/guide/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+            <state line="35" column="25" selection-start="825" selection-end="874" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,31 +60,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+            <state line="50" column="13" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.7154213">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.3/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="39" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-5.8955226">
+            <state line="423" column="33" selection-start="14952" selection-end="14952" vertical-scroll-proportion="-244.03847">
               <folding>
-                <marker date="1382685259000" expanded="false" signature="15776:15787" placeholder="..." />
+                <marker date="1382688997000" expanded="false" signature="15799:15810" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adapter.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1.3/adapter.js">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.2/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="10" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="399" column="110" selection-start="14444" selection-end="14444" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1382322764000" expanded="false" signature="14827:14838" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,14 +109,14 @@
         <option value="$PROJECT_DIR$/1.2/adatper.js" />
         <option value="$PROJECT_DIR$/1.3/build/index-min.js" />
         <option value="$PROJECT_DIR$/1.3/build/index.js" />
-        <option value="$PROJECT_DIR$/1.3/guide/index.md" />
         <option value="$PROJECT_DIR$/abc.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/1.3/adatper.js" />
         <option value="$PROJECT_DIR$/1.3/adapter.js" />
         <option value="$PROJECT_DIR$/1.3/adapter.html" />
-        <option value="$PROJECT_DIR$/1.3/demo/index.html" />
         <option value="$PROJECT_DIR$/1.3/index.js" />
+        <option value="$PROJECT_DIR$/1.3/demo/index.html" />
+        <option value="$PROJECT_DIR$/1.3/guide/index.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -195,6 +197,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -246,12 +266,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="790" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24629499" sideWeight="0.6716642" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24629499" sideWeight="0.6716642" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -327,6 +347,15 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/1.2/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="399" column="110" selection-start="14444" selection-end="14444" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1382322764000" expanded="false" signature="14827:14838" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../flight-detail/src/mods/editor/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="194" column="3" selection-start="3268" selection-end="4369" vertical-scroll-proportion="0.28753993" />
@@ -335,11 +364,6 @@
     <entry file="file://$PROJECT_DIR$/1.2/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="160" column="50" selection-start="3055" selection-end="3055" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.2/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="1760" selection-end="1772" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1.2/demo/index.html">
@@ -369,13 +393,6 @@
         <state line="6" column="26" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.3/guide/index.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/abc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="19" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
@@ -393,33 +410,42 @@
         <state line="8" column="73" selection-start="81" selection-end="81" vertical-scroll-proportion="0.19417475" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.3/adapter.js">
+    <entry file="file://$PROJECT_DIR$/1.3/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+        <state line="423" column="33" selection-start="14952" selection-end="14952" vertical-scroll-proportion="-244.03847">
+          <folding>
+            <marker date="1382688997000" expanded="false" signature="15799:15810" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.3/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="36" selection-start="2869" selection-end="2892" vertical-scroll-proportion="-3.3333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.2/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="399" column="110" selection-start="14444" selection-end="14444" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1382322764000" expanded="false" signature="14827:14838" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.3/guide/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="25" selection-start="825" selection-end="874" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
+        <state line="50" column="13" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.7154213">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.3/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="50" selection-start="2904" selection-end="2904" vertical-scroll-proportion="-3.3333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.3/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="39" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-5.8955226">
-          <folding>
-            <marker date="1382685259000" expanded="false" signature="15776:15787" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>

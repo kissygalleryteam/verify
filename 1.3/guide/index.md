@@ -13,7 +13,7 @@ verify,灵活的垂直表单验证组件。
 ### 初始化组件
 
      S.use('gallery/verify/1.3/index', function (S, verify) {
-             var verify = new verify({
+             var verify = new verify(S.one('#J_Container1'),{
                  fields:{
                      name: [
                          ['required', '请填写联系人姓名。'],
@@ -32,12 +32,8 @@ verify,灵活的垂直表单验证组件。
                  }
              });
 
-## confing 参数
-
- 
-
-
-
+##  参数 el 容器container，所有的dom操作都限定于此
+## 参数 confing
 
 <table>
 <tr>
