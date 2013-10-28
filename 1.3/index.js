@@ -13,7 +13,7 @@ KISSY.add(function (S, Node, Base) {
 
     var RULES = {
         required: function (value, arg, info) {
-            if (value === '') return [false, info ? info : '亲，不能为空。'];
+            if (value === '') return [false, info ? info : '亲，此项目为必填项。'];
             return [true];
         },
         name: function (value, arg, info) {
@@ -84,28 +84,41 @@ KISSY.add(function (S, Node, Base) {
             self.container = S.one(el);
             self.publish('verify');
             self.publish('fail');
+            var fields = self.get('fields');
+            S.each(fields,function(rule,field){
+                  self.add(field,rule);
+            });
             self._bindEvent();
 
         },
-        _bindEvent:function(){
+        _bindUI:function(field){
             var self = this;
             var autoVerify = self.get('autoVerify');
-            var fields = self.get('fields');
             var nodeFn = self.get('nodeFn');
-            if(autoVerify){
-                S.each(fields,function(value,name){
-                     var node =  nodeFn.call(self,name);
-                    if(!node) return;
-                    node.on('change',function(e){
-                        self.verify(name);
-                    });
-                    node.on('blur',function(e){
-                       if(node.val()==''){
-                           self.verify(name);
-                       }
-                    });
+            if(autoVerify ){
+                var node =  nodeFn.call(self,field);
+                if(!node) return;
+                node.on('change',function(e){
+                    self.verify(field);
+                });
+                node.on('blur',function(e){
+                    if(node.val()==''){
+                        self.verify(field);
+                    }
                 });
             }
+        },
+        _detachUI:function(field){
+            var self = this;
+            var nodeFn = self.get('nodeFn');
+            var node =  nodeFn.call(self,field);
+            if(!node) return;
+            node.detach('change');
+            node.detach('blur');
+        },
+        _bindEvent:function(){
+            var self = this;
+
             self.on('verify',function (fieldResult) {
                 var field = fieldResult.field;
                 var succeed = fieldResult.succeed;
@@ -192,6 +205,7 @@ KISSY.add(function (S, Node, Base) {
                 if (S.isArray(rule)) {
                     ruleName = rule[0];
                     info = rule[rule.length - 1];
+                    if(info == ruleName) {info = '';} ;
                     ruleResult = RULES[ruleName ](value, rule.slice(1, rule.length), info);
                 }
                 else if (S.isFunction(rule)) {
@@ -200,7 +214,8 @@ KISSY.add(function (S, Node, Base) {
                 }
                 else {
                     ruleName = rule;
-                    ruleResult = RULES[rule](value);
+
+                    ruleResult = RULES[rule] &&  RULES[rule](value) || [true];
                 }
                 function array_hash(arr1, arr2) {
                     var val = {} ;
@@ -230,7 +245,13 @@ KISSY.add(function (S, Node, Base) {
         add: function (field, val) {
             var self = this;
             var fields = self.get('fields');
-            fields[field] = val;
+            if(!fields[field]){
+                fields[field] = val;
+            }
+            if(!fields[field]._bindedUI){
+                fields[field]._bindedUI = true;
+                self._bindUI(field);
+            }
         },
         /**
          * 移除某个校验域
@@ -239,7 +260,13 @@ KISSY.add(function (S, Node, Base) {
         remove: function (field) {
             var self = this;
             var fields = self.get('fields');
-            delete fields[field];
+            if(fields[field]){
+                self._detachUI(field);
+                self.reset(field);
+                fields[field]._bindedUI = false;
+                delete fields[field];
+            }
+
         },
         /**
          * 修改某个域的校验规则
@@ -248,7 +275,8 @@ KISSY.add(function (S, Node, Base) {
          */
         modify: function (field, rule) {
             var self = this;
-            self.add(field, val);
+            self.remove(field);
+            self.add(field, rule);
         },
         /**
          * 禁用/开启某个域
