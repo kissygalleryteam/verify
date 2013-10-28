@@ -8,7 +8,8 @@
 
 ### V1.3
 
-    [!]添加适配器，提供更安全的环境。
+    [!]添加适配器，提供更安全的环境:指定操作范围参数el。
+    [!]修复add 、remove 、modify方法。
 
 ## 综述
 
@@ -25,7 +26,7 @@
 ### 初始化组件
 
       S.use('gallery/verify/1.3/index', function (S, verify) {
-              var verify = new verify(S.one('#J_Container1'),{
+              var verify = new verify('#J_Container1',{
                   fields:{
                       name: [
                           ['required', '请填写联系人姓名。'],

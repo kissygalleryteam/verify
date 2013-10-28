@@ -18,7 +18,7 @@
 <h2>validation的demo</h2>
 <form action="">
 <fieldset class="mod mod-contacter" id="J_Container1">
-    <header class="hd">默认样式</header>
+    <header class="hd">点击之后，移除姓名校验，电子邮箱不必填，并添加了备选号码的校验</header>
     <div class="bd ">
         <div class="contacter-frequently-used clearfix" ></div>
         <ul class="contacter-info">
@@ -79,15 +79,12 @@
              S.one('#J_Container1'),{
              fields:{
                  name: [
-                     ['required', '请填写联系人姓名。'],
+                     ['required','<div>d大调</div>'],
                      ['length', 0, 30, '联系人姓名不要超过30个字']
                  ],
                  tel: [
                      ['required', '请填写联系人手机号码。'],
                      'mobile'
-                 ],
-                 phone: [
-                     ['pattern',/^[a-zA-Z0-9\_\u4e00-\u9fa5]*$/, '备选号码必须为数字']
                  ],
                  email: [
                      ['required', '请填写联系人邮箱。'],
@@ -98,7 +95,10 @@
 
 
         S.one('#J_Verify').on('click',function(){
-           verify.verify();
+            verify.verify();
+            verify.add('phone',['requzired','mobile']);
+            verify.modify('email',[['email', '请检查电子邮箱的格式是否正确。']]);
+            verify.remove('name')
         });
 
     });

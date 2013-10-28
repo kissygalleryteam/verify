@@ -78,6 +78,9 @@
     position:relative;
     line-height: 32px;
 }
+.verify-wrap .hidden{
+    display: none;
+}
 .verify-wrap-error {
     background: url("http://img01.taobaocdn.com/tps/i1/T1sstPXvhdXXaSQP_X-16-16.png") no-repeat 247px 12px;
     padding-right:30px;
