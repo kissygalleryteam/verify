@@ -1,4 +1,10 @@
-KISSY.add(function (S, Node, Base) {
+/*
+combined files : 
+
+gallery/verify/1.4/index
+
+*/
+KISSY.add('gallery/verify/1.4/index',function (S, Node, Base) {
     var EMPTY = '';
     var $ = Node.all;
     /**
@@ -483,6 +489,7 @@ KISSY.add(function (S, Node, Base) {
     });
     return Verify;
 }, {requires: ['node', 'base','./index.css']});
+
 
 
 
