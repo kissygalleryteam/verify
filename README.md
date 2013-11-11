@@ -1,12 +1,12 @@
 ## verify
 
-* 版本：1.3
-* 教程：[http://gallery.kissyui.com/verify/1.3/guide/index.html](http://gallery.kissyui.com/verify/1.3/guide/index.html)
-* demo：[http://gallery.kissyui.com/verify/1.3/demo/index.html](http://gallery.kissyui.com/verify/1.3/demo/index.html)
+* 版本：1.4
+* 教程：[http://gallery.kissyui.com/verify/1.4/guide/index.html](http://gallery.kissyui.com/verify/1.4/guide/index.html)
+* demo：[http://gallery.kissyui.com/verify/1.4/demo/index.html](http://gallery.kissyui.com/verify/1.4/demo/index.html)
 
 ## changelog
 
-### V1.3
+### V1.4
 
     [!]添加适配器，提供更安全的环境:指定操作范围参数el。
     [!]修复add 、remove 、modify方法。
@@ -25,7 +25,7 @@
 
 ### 初始化组件
 
-      S.use('gallery/verify/1.3/index', function (S, verify) {
+      S.use('gallery/verify/1.4/index', function (S, verify) {
               var verify = new verify('#J_Container1',{
                   fields:{
                       name: [

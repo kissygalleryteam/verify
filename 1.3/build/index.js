@@ -272,7 +272,6 @@ KISSY.add('gallery/verify/1.3/index',function (S, Node, Base) {
                 fields[field]._bindedUI = false;
                 delete fields[field];
             }
-
         },
         /**
          * 修改某个域的校验规则
